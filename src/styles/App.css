@@ -1,0 +1,161 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.halved {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#set-board-screen-board-holder{
+    height: 70vh;
+    width: 70%;
+}
+
+#wew,
+#wew2,
+#wew3,
+#inner-board,
+#top-heading-holder,
+#game-screen-div  {
+    display: grid;   
+}
+
+#game-screen-div {
+    grid-template-columns: 1fr 1fr;
+}
+
+#wew2 {
+    grid-template-rows: repeat(10, 1fr);    
+}
+
+#top-heading-holder {
+    grid-template-columns: repeat(10, 1fr);   
+}
+
+#inner-board,
+#wew {
+    grid-template-columns: 1fr 5fr;
+}
+
+#wew3 {
+    grid-template-rows: repeat(10, 1fr);  
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#set-board-screen-left {
+    display: flex;
+    justify-content: flex-end;
+    height: 80vh;
+}
+
+.ship-container {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-gap: 10px;
+}
+
+.ship-container :first-child {
+    justify-self: end;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.square {
+    border: 2px solid blue;
+    background: #a6dced;
+    color: #a6dced;
+    height: 100%;
+    width: 100%;
+}
+
+.ship {
+    border: 2px solid gray;
+    background: lightgray; 
+    color: lightgray; 
+}
+
+
+.ship-block {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.square-hover {
+    border: 2px solid white;
+    background: #6fbbd3;  
+    color: #6fbbd3;  
+}
+
+#ship-info-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+#arrange-heading {
+    text-align: center;
+}
+
+#set-board-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.board-heading {
+    text-align: center;  
+    align-self: end;
+    padding: 0 0 10px 0;
+}
+
+
+.obscured {
+    background: darkblue;
+    color: darkblue;  
+    border: 2px solid grey;      
+}
+
+.hit-area {
+    background: red;
+    color: red;
+}
+
+#end-screen-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background: rgb(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
